@@ -1,0 +1,44 @@
+{
+  "name": "causality-vscode",
+  "displayName": "Causality",
+  "description": "Causality VS Code extension (scaffold).",
+  "version": "0.0.0",
+  "private": true,
+  "publisher": "causality",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tatianaticona05/causality.git"
+  },
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./out/extension.js",
+  "activationEvents": [],
+  "contributes": {
+    "commands": [
+      {
+        "command": "causality.helloWorld",
+        "title": "Causality: Hello World"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "watch": "tsc -p tsconfig.json --watch",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "package": "vsce package --no-dependencies --out causality-vscode.vsix"
+  },
+  "dependencies": {
+    "@causality/shared": "*"
+  },
+  "devDependencies": {
+    "@types/node": "20.14.15",
+    "@types/vscode": "1.90.0",
+    "@vscode/vsce": "3.9.2",
+    "typescript": "5.5.4"
+  }
+}

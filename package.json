@@ -1,0 +1,28 @@
+{
+  "name": "causality",
+  "private": true,
+  "version": "0.0.0",
+  "license": "Apache-2.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "extension"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "build:shared": "npm run build --workspace @causality/shared",
+    "dev:web": "npm run dev --workspace @causality/web",
+    "dev:api": "npm run dev --workspace @causality/api",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "prettier": "3.3.3",
+    "typescript": "5.5.4"
+  }
+}

@@ -1,7 +1,9 @@
 /**
  * Shared types and helpers used by the web app, the API and the VS Code extension.
- * Kept intentionally minimal: only an example export to verify cross-package imports.
+ * Exposes the project domain model plus a small health helper.
  */
+
+export * from './domain/index.js';
 
 export const SHARED_PACKAGE_NAME = '@causality/shared';
 

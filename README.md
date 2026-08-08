@@ -41,7 +41,8 @@ npm install
 ```
 
 Build the shared package once so that the web app, API and extension can resolve its
-compiled output:
+compiled output (`npm run build` and `npm run typecheck` do this for you, but the dev
+servers do not):
 
 ```bash
 npm run build:shared
@@ -69,7 +70,7 @@ Development Host, then run `Causality: Hello World` from the command palette.
 ## Common commands (run from the repository root)
 
 ```bash
-npm run build         # build every workspace
+npm run build         # build shared, then every other workspace
 npm run typecheck     # TypeScript checks for every workspace
 npm run test          # run tests for workspaces that define them (none yet)
 npm run format        # format with Prettier

@@ -12,11 +12,11 @@
     "node": ">=20"
   },
   "scripts": {
-    "build": "npm run build --workspaces --if-present",
+    "build": "npm run build:shared && npm run build --workspace @causality/api --workspace @causality/web --workspace causality-vscode",
     "build:shared": "npm run build --workspace @causality/shared",
     "dev:web": "npm run dev --workspace @causality/web",
     "dev:api": "npm run dev --workspace @causality/api",
-    "typecheck": "npm run typecheck --workspaces --if-present",
+    "typecheck": "npm run build:shared && npm run typecheck --workspaces --if-present",
     "test": "npm run test --workspaces --if-present",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
